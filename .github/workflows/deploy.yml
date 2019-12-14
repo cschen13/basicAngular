@@ -19,7 +19,7 @@ jobs:
       run: |
         npm install
         npm run build
-    - uses: miwebst/anotherdeploy@master
+    - uses: cschen13/anotherdeploy@master
       with:
         azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN }}
         action: 'upload'         
@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Azure Pages Close Pull Request Job
     steps:
-    - uses: miwebst/anotherdeploy@master
+    - uses: cschen13/anotherdeploy@master
       with:
         azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN }}
         action: 'close'
